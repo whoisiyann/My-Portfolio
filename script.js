@@ -65,7 +65,7 @@ const prevBtn = document.querySelector('.gallery-btn.prev');
 const nextBtn = document.querySelector('.gallery-btn.next');
 
 let scrollPosition = 0;
-let speed = 0.5;
+let speed = 1.0;
 let galleryWidth;
 
 function updateGalleryWidth() {
