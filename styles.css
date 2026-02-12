@@ -366,7 +366,7 @@ body {
 
 .gallery {
     display: flex;
-    gap: 20px;
+    gap: 5px;
     align-items: flex-start;
     will-change: transform;
 }
@@ -379,7 +379,7 @@ body {
     flex-shrink: 0;
     background: #fff;
     padding: 10px;
-    box-shadow: 0 8px 20px rgba(245, 14, 14, 0.1);
+    box-shadow: 0 8px 20px rgba(235, 230, 230, 0.1);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -593,7 +593,9 @@ body.dark-mode .project a:hover {
 
 /* ================= RESPONSIVE TABLE ================= */
 .schedule-table {
-    overflow-x: auto;
+    width: 100%;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
 }
 
 .schedule-table table {
@@ -603,63 +605,33 @@ body.dark-mode .project a:hover {
 }
 
 .schedule-table th, .schedule-table td {
-    padding: 8px;
+    padding: 8px 12px;
     font-size: 14px;
-    white-space: normal;
+    white-space: nowrap;
     text-align: left;
+    word-wrap: break-word; 
 }
 
 /* Mobile adjustments */
-@media(max-width: 900px) {
-    .grid, .bottom-row {
-        flex-direction: column;
-    }
-    
-    .header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .header-info h1 {
-        font-size: 24px;
-    }
-
-    .header-info p {
-        font-size: 14px;
-    }
-
-    .schedule-tabs {
-        justify-content: center;
-    }
-    
+@media (max-width: 900px) {
     .schedule-table table {
         min-width: 100%; 
         font-size: 13px;
     }
 
-    .tech-stack {
-        justify-content: center;
+    .schedule-table th, .schedule-table td {
+        white-space: normal; 
+        padding: 6px 8px;
     }
 }
 
-@media(max-width: 600px) {
-    .gallery-btn.prev { left: 5px; }
-    .gallery-btn.next { right: 5px; }
-
-    .profile-pic {
-        width: 100px;
-        height: 100px;
+@media (max-width: 600px) {
+    .schedule-table table {
+        font-size: 12px;
     }
 
     .schedule-table th, .schedule-table td {
-        font-size: 12px;
-        padding: 6px;
-    }
-
-    .tab-btn {
-        padding: 6px 12px;
-        font-size: 12px;
+        padding: 4px 6px;
     }
 }
 
